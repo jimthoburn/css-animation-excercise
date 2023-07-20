@@ -4,14 +4,20 @@ Open `style.css` in this folder, for more details.
 
 ## How to start a development server
 
-1. Open a terminal
+You can follow these steps, to see your changes in a web browser while you work:
 
-2. Install dependencies
+1. Install [Node.js](https://nodejs.org)
+
+2. Open a terminal
+
+3. Install dependencies
 ```
 npm install
 ```
 
-3. Start the server
+4. Start the server
 ```
 npm run dev
 ```
+
+5. Open a web browser and visit: http://localhost:3000
