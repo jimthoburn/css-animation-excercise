@@ -1,0 +1,391 @@
+
+
+/*
+-----------------------------------------------
+Move “Link” to the master sword, when a user activates it…
+*/
+.link {
+  transition-property: transform;
+  transition-duration: 4s;
+  transition-timing-function: ease-in-out;
+}
+
+.lost-woods:hover  .link,
+.lost-woods:active .link,
+.lost-woods:focus  .link {
+  transform: translateY(-400px);
+}
+
+
+
+
+/*
+-----------------------------------------------
+Here are more styles that arrange the type, forest and characters…
+*/
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+html, body {
+  font-family: "Press Start 2P", "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+figure {
+  position: relative;
+  padding-bottom: 60px;
+}
+figure img {
+  display: block;
+}
+.lost-woods-mask {
+  position: absolute;
+  z-index: 2;
+  top: 316px;
+  left: 350px;
+}
+.sword-mask {
+  position: absolute;
+  top: 128px;
+  left: 360px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.6s;
+}
+
+.link {
+  position: absolute;
+  top: 590px;
+  left: 380px;
+}
+.link__character {
+  background-image: url(https://jimthoburn.com/codepen/qMBVGq-lost-woods/link-version3.png);
+  background-position: 0 -233px;
+  display: block;
+  width: 50px;
+  height: 60px;
+  animation-name: link-walk;
+  animation-duration: 1.4s;
+  animation-timing-function: steps(8, end);
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.lost-woods:hover .link__character,
+.lost-woods:active .link__character,
+.lost-woods:focus .link__character {
+  animation-name: link-walk-away;
+}
+
+.hint {
+  margin-bottom: 3em;
+  max-width: 42em;
+}
+
+@keyframes link-walk {
+  0% {
+    background-position: 0 -55px;
+  }
+  100% {
+    background-position: -480px -55px;
+  }
+}
+
+@keyframes link-walk-away {
+  0% {
+    background-position: 0 -234px;
+  }
+  100% {
+    background-position: -480px -234px;
+  }
+}
+
+.lost-woods:hover  .link__character--with-sword,
+.lost-woods:active .link__character--with-sword,
+.lost-woods:focus  .link__character--with-sword {
+  background-position: -830px -75px;
+  animation-name: unset;
+  height: 80px;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.sword-mask--active {
+  opacity: 1;
+}
+
+.star {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://jimthoburn.com/codepen/qMBVGq-lost-woods/star.svg);
+  position: absolute;
+}
+.star-1 {
+  top: 148px;
+  left: 368px;
+}
+.star-2 {
+  top: 188px;
+  left: 432px;
+}
+
+.circle {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-1 {
+  top: 150px;
+  left: 419px;
+}
+.circle-2 {
+  top: 190px;
+  left: 357px;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.star,
+.circle {
+  animation-name: twinkle;
+  animation-duration: 24s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.star-2 {
+  animation-delay: -3.5s;
+}
+.star-1 {
+  animation-delay: -14.5s;
+}
+.circle-2 {
+  animation-delay: -10s;
+}
+.circle-1 {
+  animation-delay: -12.6s;
+}
+
+.dragonfly {
+  position: absolute;
+}
+
+.dragonfly__character {
+  display: block;
+  width: 34px;
+  height: 40px;
+  background-image: url(https://jimthoburn.com/codepen/qMBVGq-lost-woods/dragonfly.svg);
+}
+.dragonfly-2 .dragonfly__character {
+  background-image: url(https://jimthoburn.com/codepen/qMBVGq-lost-woods/dragonfly-reverse.svg);
+}
+
+.dragonfly-1 {
+  top: 186px;
+  left: 71px;
+}
+
+.dragonfly-2 {
+  top: 16px;
+  left: 593px;
+}
+
+.dragonfly-shadow {
+  display: block;
+  background-color: rgba(0, 74, 45, 0.5);
+  border-radius: 50%;
+  width: 12px;
+  height: 6px;
+
+  position: absolute;
+}
+
+.dragonfly-shadow-1 {
+  top: 245px;
+  left: 72px;
+}
+
+
+@keyframes levitate {
+  0% {
+    transform: translate(0, 10%);
+  }
+  10% {
+    transform: translate(0, -15%);
+  }
+  20% {
+    transform: translate(0, 20%);
+  }
+  30% {
+    transform: translate(0, -20%);
+  }
+  40% {
+    transform: translate(0, 15%);
+  }
+  50% {
+    transform: translate(0, -15%);
+  }
+  60% {
+    transform: translate(0, 20%);
+  }
+  70% {
+    transform: translate(0, -20%);
+  }
+  80% {
+    transform: translate(0, 15%);
+  }
+  90% {
+    transform: translate(0, 10%);
+  }
+  100% {
+    transform: translate(0, -10%);
+  }
+}
+
+.dragonfly__character {
+  animation-name: levitate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-delay: 0;
+}
+
+.dragonfly-shadow {
+  animation-name: shrink-and-grow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+
+.dragonfly-1 .dragonfly__character {
+  animation-delay: -0.5s;
+}
+.dragonfly-shadow {
+  animation-delay: -0.5s;
+}
+
+
+@keyframes flutter {
+  0% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+.dragonfly,
+.dragonfly-shadow {
+  animation-name: flutter;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-delay: 0;
+}
+
+.dragonfly-1,
+.dragonfly-shadow-1 {
+   animation-delay: -2s;
+}

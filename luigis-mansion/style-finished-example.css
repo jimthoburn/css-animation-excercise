@@ -1,0 +1,247 @@
+
+/*
+-----------------------------------------------
+Move the ghosts up and down…
+*/
+@keyframes levitate {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(20%);
+  }
+}
+
+@keyframes shrink-and-grow {
+  0% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+}
+
+.ghost {
+  animation-name: levitate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-delay: 0;
+}
+
+.shadow {
+  animation-name: shrink-and-grow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+.ghost-1 {
+  animation-delay: 0;
+}
+.shadow-1 {
+  animation-delay: 0;
+}
+
+.ghost-2 {
+  animation-delay: -0.5s;
+}
+.shadow-2 {
+  animation-delay: -0.5s;
+}
+
+.ghost-3 {
+  animation-delay: -1s;
+}
+.shadow-3 {
+  animation-delay: -1s;
+}
+
+
+/*
+-----------------------------------------------
+Here are more styles that arrange the type, mansion and ghosts…
+*/
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+html, body {
+  font-family: "Press Start 2P", "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+}
+figure {
+  position: relative;
+}
+figure img {
+  display: block;
+}
+.ghost {
+  position: absolute;
+  z-index: 1;
+  /*filter: invert(100%);*/
+}
+.shadow {
+  background-color: rgb(116, 95, 221);
+  border-radius: 50%;
+  width: 30px;
+  height: 15px;
+
+  position: absolute;
+}
+
+.ghost-1 {
+  top: 340px;
+  left: 400px;
+}
+.shadow-1 {
+  top: 400px;
+  left: 410px;
+}
+
+.ghost-2 {
+  top: 415px;
+  left: 620px;
+}
+.shadow-2 {
+  top: 475px;
+  left: 630px;
+}
+
+.ghost-3 {
+  top: 390px;
+  left: 130px;
+}
+.shadow-3 {
+  top: 450px;
+  left: 140px;
+}
+
+.eye {
+  background-color: rgb(219, 66, 66);
+  display: block;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 240px;
+}
+
+.eye--left {
+  left: 370px;
+}
+.eye--right {
+  left: 410px;
+}
+
+@keyframes blink {
+  0% {
+    height: 0;
+  }
+  37.5% {
+    height: 0;
+  }
+  38% {
+    height: 30px;
+  }
+  38.5% {
+    height: 0;
+  }
+  99.5% {
+    height: 0;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+.eye {
+  animation-name: blink;
+  animation-duration: 30s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+.orb {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+
+.orb-1 {
+  top: 484px;
+  left: 263px;
+}
+.orb-2 {
+  top: 302px;
+  left: 149px;
+}
+.orb-3 {
+  top: 358px;
+  left: 635px;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  62.5% {
+    opacity: 0;
+  }
+  67.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.orb {
+  animation-name: glow;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+
+.orb-2 {
+  animation-delay: 0s;
+}
+.orb-3 {
+  animation-delay: -1.5s;
+}
+.orb-1 {
+  animation-delay: -7.5s;
+}
+
+
