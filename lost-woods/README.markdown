@@ -1,5 +1,7 @@
 # Lost woods
 
+Open `style.css` in this folder, for more details.
+
 ## How to start a development server
 
 1. Open a terminal
