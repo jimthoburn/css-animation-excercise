@@ -1,4 +1,4 @@
-# Luigi’s Mansion
+# Luigi’s Mansion, CSS Animation Exercise
 
 Open `style.css` in this folder, for more details.
 
