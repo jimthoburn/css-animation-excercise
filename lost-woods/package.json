@@ -1,0 +1,9 @@
+{
+  "name": "css-animation-tutorial",
+  "scripts": {
+    "dev": "serve"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
