@@ -29,7 +29,7 @@ transform: translateY( 30px )
 .lost-woods:hover  .link,
 .lost-woods:active .link,
 .lost-woods:focus  .link {
-  transform: translateY(-710%)
+  transform: translateY(-720%)
   /* transform: translateY( … ) */
 }
 
