@@ -1,4 +1,4 @@
-# Lost woods
+# Lost Woods, CSS Transition Exercise
 
 Open `style.css` in this folder, for more details.
 
