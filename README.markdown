@@ -1,6 +1,6 @@
-# CSS animation excercise
+# CSS animation exercises
 
-You can find the excercises in these two folders...
+You can find the exercises in these two folders...
 
 ```
 ├── lost-woods/
