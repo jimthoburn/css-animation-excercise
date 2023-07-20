@@ -1,9 +1,9 @@
 {
   "name": "lost-woods",
   "scripts": {
-    "dev": "serve"
+    "start": "serve"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "latest"
   }
 }

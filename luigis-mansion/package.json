@@ -1,9 +1,9 @@
 {
   "name": "luigis-mansion",
   "scripts": {
-    "dev": "serve"
+    "start": "serve"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "latest"
   }
 }

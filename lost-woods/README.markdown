@@ -17,7 +17,7 @@ npm install
 
 4. Start the server
 ```
-npm run dev
+npm start
 ```
 
 5. Open a web browser and visit: http://localhost:3000
